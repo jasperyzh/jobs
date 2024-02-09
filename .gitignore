@@ -1,4 +1,3 @@
-src/pages/resume.astro
 
 # build output
 dist/
@@ -21,3 +20,6 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+
+
+src/pages/resume.astro
