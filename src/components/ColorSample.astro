@@ -1,0 +1,100 @@
+---
+const {
+  title = "primary1",
+  width = 128,
+  height = 128,
+  style = "",
+  show_copy = true,
+  ...props
+} = Astro.props;
+
+const defaultStyle = "fill:none; filter: drop-shadow(4px 4px 4px #808185);";
+const combinedStyle = `${defaultStyle} ${style}`;
+
+// Function to convert hex color to RGB
+const hexToRgb = (hex) => {
+  const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+  return result
+    ? {
+        r: parseInt(result[1], 16),
+        g: parseInt(result[2], 16),
+        b: parseInt(result[3], 16),
+      }
+    : null;
+};
+
+// Extracting fill color from style
+const fillColor = style.match(/fill:\s*(#[0-9a-f]{6})/i)?.[1];
+const rgbColor = fillColor ? hexToRgb(fillColor) : null;
+const rgbString = rgbColor ? `${rgbColor.r}, ${rgbColor.g}, ${rgbColor.b}` : "";
+---
+
+<div>
+  <svg
+    class="copy_color"
+    data-colorcode={fillColor}
+    {...props}
+    style={combinedStyle}
+    width={width}
+    height={height}
+  >
+    <title>{title}</title>
+    <ellipse cx="50%" cy="50%" rx="50%" ry="50%"></ellipse>
+  </svg>
+  {
+    show_copy && (
+      <div>
+        <button class="copy_color" data-colorcode={fillColor}>
+          {fillColor}
+        </button>
+        <button class="copy_color" data-colorcode={rgbString}>
+          {rgbString}
+        </button>
+      </div>
+    )
+  }
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    setupCopyToClipboard();
+  });
+
+  function setupCopyToClipboard() {
+    document.querySelectorAll(".copy_color").forEach((btn) => {
+      btn.addEventListener("click", function () {
+        copyToClipboard(this.getAttribute("data-colorcode"));
+      });
+    });
+  }
+  // Function to copy text to clipboard
+  const copyToClipboard = (text) => {
+    navigator.clipboard.writeText(text).then(
+      () => {
+        showMessage(`Copied: ${text}`);
+        console.log(`Copied: ${text}`);
+      },
+      (err) => {
+        console.error("Could not copy text: ", err);
+      }
+    );
+  };
+
+  // Function to show a message temporarily
+  function showMessage(message) {
+    console.log('test', message)
+    const messageDiv = document.getElementById("copyMessage");
+    messageDiv.textContent = message;
+    messageDiv.style.display = "inline-block";
+
+    // Hide the message after 2 seconds
+    setTimeout(() => {
+      messageDiv.style.display = "none";
+    }, 4000);
+  }
+</script>
+
+<style>
+  svg {
+    cursor: pointer;
+  }
+</style>

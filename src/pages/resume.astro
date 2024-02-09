@@ -1,0 +1,420 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import Placeholder from "../components/Placeholder.astro";
+
+import ColorSample from "../components/ColorSample.astro";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Jasper Yong | Resume</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/paper-css/0.3.0/paper.css"
+    />
+    <style>
+      @page {
+        size: A4;
+      }
+    </style>
+  </head>
+
+  <body class="A4">
+    <!-- Each sheet element should have the class "sheet" -->
+    <section id="page-1" class="sheet padding-10mm">
+      <article id="person">
+        <div class="col">
+          <h1><strong>Jasper Yong</strong></h1>
+          <p class="lead">Web Developer</p>
+        </div>
+        <div class="col"></div>
+        <div class="col">
+          <ul class="custom-list">
+            <li class="geo">
+              B70909, 1120 Park Avenue,
+              <br />No 2a, PJS 1/52, Taman Petaling Utama
+              <br />46150 Petaling Jaya, Selangor
+            </li>
+            <li class="email">jasper.yzh@gmail.com</li>
+            <li class="phone">+6013 391 2105</li>
+          </ul>
+        </div>
+      </article>
+
+      <aside class="page-side">
+        <article id="about">
+          <h2>Profile</h2>
+          <p>
+            Experienced Web Developer with over 8 years in front and back-end
+            development, I combine my deep understanding of HTML, CSS,
+            JavaScript, AstroJS, WordPress, and CLI-terminal with a passion for
+            multimedia design.
+          </p>
+          <p>
+            Commitmented to crafting engaging, user-friendly websites is driven
+            by a continuous pursuit of knowledge in emerging technologies.
+          </p>
+        </article>
+
+        <hr />
+
+        <article id="skill">
+          <h2>Key Skills</h2>
+
+          <span class="badge fs-6 bg-primary">HTML</span>
+          <span class="badge fs-6 bg-primary">CSS</span>
+          <span class="badge fs-6 bg-primary">JavaScript</span>
+
+          <span class="badge fs-6 bg-secondary">WordPress</span>
+          <span class="badge fs-6 bg-secondary">AstroJs</span>
+
+          <span class="badge bg-primary">BootstrapCSS</span>
+          <span class="badge bg-primary">TailwindCSS</span>
+          <span class="badge bg-primary">VueJS</span>
+
+          <span class="badge bg-primary">PHP</span>
+          <span class="badge bg-primary">MySQL</span>
+          <span class="badge bg-primary">NodeJS</span>
+          <span class="badge bg-primary">PHP</span>
+          <span class="badge bg-primary">Figma</span>
+          <span class="badge bg-primary">Adobe Photoshop / Illustrator</span>
+
+          <span class="badge bg-primary">Github</span>
+          <span class="badge bg-primary">Bash</span>
+          <span class="badge bg-info">Linux / Fedora</span>
+          <span class="badge bg-info">English / Chinese</span>
+
+          <hr />
+
+          <span class="badge bg-primary">Compassionate</span>
+          <span class="badge bg-primary">Organized</span>
+          <span class="badge bg-primary">Efficient</span>
+        </article>
+      </aside>
+
+      <main class="page-main">
+        <article id="job">
+          <h2>Experience</h2>
+          <section>
+            <h3>Web Developer</h3>
+            <p>Fishermen Analytics | USJ, Selangor | 2015 &mdash; Current</p>
+            <p>
+              Developed and designed responsive websites using HTML, CSS,
+              JavaScript, and WordPress. Collaborated with cross-functional
+              teams to ensure alignment with client requirements. Managed
+              website updates, troubleshooting, and performance optimization.
+            </p>
+            <p>
+              Leading a small team on producing and consulting on web solutions,
+              from Email template, Ads Banners, campaign websites, Full-fledged
+              website with content-management-system.
+            </p>
+            <div>
+              <span class="badge bg-primary">Petrosains</span>
+              <span class="badge bg-primary">Yayasan Petronas</span>
+              <span class="badge bg-primary">Methodist College KL/Penang</span>
+              <span class="badge bg-primary">Paramount Property</span>
+              <span class="badge bg-primary">Taylor's University</span>
+              <span class="badge bg-primary">BSN</span>
+            </div>
+          </section>
+
+          <hr />
+
+          <section>
+            <h3>Barista, Starbucks</h3>
+            <p>
+              A 6 months gig at fast pace F&B. Learning the dark art of coffee
+              making and deeper appreciation of the coffee culture.
+            </p>
+          </section>
+
+          <hr />
+
+          <section>
+            <h3>Multimedia Designer</h3>
+            <p>
+              Created print content in paper medium including poster, exhibition
+              wallpapers, booth setup. Worked closely with production line,
+              delivery, setup exhibitions for clients.
+            </p>
+          </section>
+        </article>
+      </main>
+      <footer>
+        <p>helloworld</p>
+      </footer>
+    </section>
+    <!-- END page-1 -->
+
+    <section id="page-2" class="sheet padding-10mm">
+      <section class="page-side">
+        <article id="achievements">
+          <h2>Achievements</h2>
+          <ul>
+            <li>Self-taught and creating products to fits clients need</li>
+            <li>
+              Built workflow and framework on handling multiples projects and
+              clients.
+            </li>
+            <li>
+              Improves and optimize website's speed & SEO scores to average of
+              75+
+            </li>
+          </ul>
+        </article>
+
+        <hr />
+
+        <article id="more">
+          <h2>References</h2>
+          <ul class="list-unstyled">
+            <li><strong>David</strong></li>
+            <li>+6013 888 1800</li>
+            <li>helloworld@email.com</li>
+          </ul>
+          <ul class="list-unstyled">
+            <li><strong>Serena</strong></li>
+            <li>+6013 888 1800</li>
+            <li>helloworld@email.com</li>
+          </ul>
+        </article>
+
+        <hr />
+      </section>
+
+      <section class="page-main"></section>
+      <article id="educations">
+        <h2>Educations</h2>
+
+        <section>
+          <h3>BA (Hons) in Computer Games Designs</h3>
+          <p>[University of Teesside], [United Kingdom] | [2009 - 2012]</p>
+        </section>
+
+        <section>
+          <h3>Diploma in Multimedia Design</h3>
+          <p>[The One Academy], [Malaysia] | [2006 - 2008]</p>
+        </section>
+      </article>
+
+      <article id="skills">
+        <h2>Skills</h2>
+
+        <span class="badge fs-6 rounded-0 d-inline-block bg-info">HTML</span>
+        <span class="badge fs-6 rounded-0 d-inline-block bg-info">CSS</span>
+        <span class="badge fs-6 rounded-0 d-inline-block bg-info"
+          >Javascript</span
+        >
+        <span class="badge fs-6 rounded-0 d-inline-block bg-info"
+          >CMS / Frameworks / Build Tools</span
+        >
+        <span class="badge fs-6 rounded-0 d-inline-block bg-info"
+          >WordPress</span
+        >
+        <span class="badge fs-6 rounded-0 d-inline-block bg-info">AstroJs</span>
+        <span class="badge fs-6 rounded-0 d-inline-block bg-info"
+          >BootstrapCSS</span
+        >
+        <span class="badge fs-6 rounded-0 d-inline-block bg-info"
+          >TailwindCSS</span
+        >
+        <span class="badge fs-6 rounded-0 d-inline-block bg-info">VueJS</span>
+        <span class="badge fs-6 rounded-0 d-inline-block bg-info">Backend</span>
+        <span class="badge fs-6 rounded-0 d-inline-block bg-info">PHP</span>
+        <span class="badge fs-6 rounded-0 d-inline-block bg-info">MySQL</span>
+        <span class="badge fs-6 rounded-0 d-inline-block bg-info">NodeJS</span>
+        <span class="badge fs-6 rounded-0 d-inline-block bg-info"
+          >Design Tools</span
+        >
+        <span class="badge fs-6 rounded-0 d-inline-block bg-info">Figma</span>
+        <span class="badge fs-6 rounded-0 d-inline-block bg-info"
+          >Photoshop</span
+        >
+        <span class="badge fs-6 rounded-0 d-inline-block bg-info"
+          >Illustrator</span
+        >
+        <span class="badge fs-6 rounded-0 d-inline-block bg-info">Tool</span>
+        <span class="badge fs-6 rounded-0 d-inline-block bg-info"
+          >Git & Github</span
+        >
+        <span class="badge fs-6 rounded-0 d-inline-block bg-info">Bash</span>
+        <span class="badge fs-6 rounded-0 d-inline-block bg-info"
+          >Linux/Fedora</span
+        >
+        <span class="badge fs-6 rounded-0 d-inline-block bg-info"
+          >English/Chinese</span
+        >
+        <section>
+          <h1>Lorem ipsum dolor sit.(h1)</h1>
+          <h2>Lorem ipsum dolor sit.(h2)</h2>
+          <h3>Lorem ipsum dolor sit.(h3)</h3>
+          <hr />
+          <h1 style="font-size: 18pt">Lorem ipsum dolor sit.(18pt)</h1>
+          <h2 style="font-size: 16pt">Lorem ipsum dolor sit.(16pt)</h2>
+          <h3 style="font-size: 14pt">Lorem ipsum dolor sit.(14pt)</h3>
+          <h4 style="font-size: 12pt">Lorem ipsum dolor sit.(12pt)</h4>
+          <h5 style="font-size: 10pt">Lorem ipsum dolor sit.(10pt)</h5>
+          <h6 style="font-size: 8pt">Lorem ipsum dolor sit.(8pt)</h6>
+          <p>
+            Love and wants more of: Woodworking / Film / Movie / Gaming (10pt)
+          </p>
+        </section>
+      </article>
+
+      <article id="interests">
+        <h2>Interests</h2>
+        <section>
+          <ul>
+            <li>Exploring the intersection of art and technology.</li>
+            <li>
+              Engaging with the latest trends in web development and web3.
+            </li>
+            <li>
+              Personal and professional development through learning and
+              knowledge management.
+            </li>
+            <li>Generative Art</li>
+            <li>YouTube / Internet Culture</li>
+            <li>Philosophy</li>
+            <li>Music | EDM, Progressive Trance, D&B</li>
+            <li>Love and wants more of: Woodworking / Film / Movie / Gaming</li>
+          </ul>
+        </section>
+
+        
+      </article>
+    </section>
+    <!-- END page-2 -->
+  </body>
+
+  <script
+    is:inline
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+</html>
+
+<style>
+  /* https://stackoverflow.com/questions/16649943/css-to-set-a4-paper-size */
+  body {
+    margin: 0;
+    padding: 0;
+    font-size: 10pt;
+    line-height: 1.6;
+  }
+  @page {
+    size: A4;
+    margin: 0;
+  }
+  @media print {
+    html,
+    body {
+      width: 210mm;
+      height: 297mm;
+    }
+  }
+  #page-2,
+  #page-1 {
+    display: grid;
+    gap: 0.618cm;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto 1fr;
+    #person {
+      grid-column: 1 / -1;
+      max-height: 110px;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+
+      gap: 1rem;
+    }
+
+    #page-side {
+      grid-column: 1/2;
+    }
+    #page-main {
+      grid-column: 2/-1;
+    }
+  }
+
+  #page-2,
+  #page-1 {
+    background-image: url("/resume/bg-top.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top;
+
+    &:after {
+      content: " ";
+      display: block;
+      width: 100%;
+      height: 100px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-image: url("/resume/bg-bottom.jpg");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: bottom;
+      z-index: 0;
+    }
+    footer {
+      z-index: 5;
+    }
+
+    & > * {
+      background: rgba(200, 200, 200, 0.1);
+    }
+  }
+
+  hr {
+    margin: 1rem auto;
+    border: 1px dotted #000;
+  }
+
+  h1 {
+    font-size: 23pt;
+  }
+  h2 {
+    font-size: 18pt;
+  }
+  h3 {
+    font-size: 15pt;
+  }
+  .badge {
+    font-size: 8pt;
+  }
+  ul.custom-list {
+    list-style: none;
+    padding: 0;
+    font-size: 8.5pt;
+  }
+  ul.custom-list li {
+    background-repeat: no-repeat;
+    background-size: 1rem; /* Adjust size */
+    background-position: left 0.25rem;
+    padding-left: 1.5rem; /* Adjust spacing */
+    margin-bottom: 0.5rem; /* Space between items */
+  }
+  li.geo {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-geo-alt-fill' viewBox='0 0 16 16'%3E%3Cpath d='M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6'/%3E%3C/svg%3E");
+  }
+  li.phone {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-telephone-fill' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z'/%3E%3C/svg%3E");
+  }
+
+  ul li.email {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-envelope-at-fill' viewBox='0 0 16 16' %3E%3Cpath d='M2 2A2 2 0 0 0 .05 3.555L8 8.414l7.95-4.859A2 2 0 0 0 14 2zm-2 9.8V4.698l5.803 3.546zm6.761-2.97-6.57 4.026A2 2 0 0 0 2 14h6.256A4.5 4.5 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586zM16 9.671V4.697l-5.803 3.546.338.208A4.5 4.5 0 0 1 12.5 8c1.414 0 2.675.652 3.5 1.671' %3E%3C/path%3E%3Cpath d='M15.834 12.244c0 1.168-.577 2.025-1.587 2.025-.503 0-1.002-.228-1.12-.648h-.043c-.118.416-.543.643-1.015.643-.77 0-1.259-.542-1.259-1.434v-.529c0-.844.481-1.4 1.26-1.4.585 0 .87.333.953.63h.03v-.568h.905v2.19c0 .272.18.42.411.42.315 0 .639-.415.639-1.39v-.118c0-1.277-.95-2.326-2.484-2.326h-.04c-1.582 0-2.64 1.067-2.64 2.724v.157c0 1.867 1.237 2.654 2.57 2.654h.045c.507 0 .935-.07 1.18-.18v.731c-.219.1-.643.175-1.237.175h-.044C10.438 16 9 14.82 9 12.646v-.214C9 10.36 10.421 9 12.485 9h.035c2.12 0 3.314 1.43 3.314 3.034zm-4.04.21v.227c0 .586.227.8.581.8.31 0 .564-.17.564-.743v-.367c0-.516-.275-.708-.572-.708-.346 0-.573.245-.573.791' %3E%3C/path%3E%3C/svg%3E");
+  }
+</style>

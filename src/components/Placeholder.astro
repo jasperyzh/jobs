@@ -1,0 +1,17 @@
+---
+const {
+  title = "placeholder",
+  width = 400,
+  height = 300,
+  style = "",
+  ...props
+} = Astro.props;
+
+const defaultStyle = "fill:none; stroke:lime; stroke-width:3;";
+const combinedStyle = `${defaultStyle} ${style}`;
+---
+
+<svg {...props} style={combinedStyle} width={width} height={height}>
+  <title>{title}</title>
+  <rect width="100%" height="100%"></rect>
+</svg>

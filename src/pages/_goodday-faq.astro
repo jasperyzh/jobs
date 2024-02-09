@@ -1,0 +1,66 @@
+---
+const { className = "", ...props } = Astro.props;
+
+// example data for accordion
+const data2 = [
+  {
+    title: "Accordion Item #1",
+    content: "This is the first item's accordion body. It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the .accordion-body, though the transition does limit overflow."
+  },
+  {
+    title: "Accordion Item #2",
+    content: "This is the second item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the .accordion-body, though the transition does limit overflow."
+  },
+  {
+    title: "Accordion Item #3",
+    content: "This is the third item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the .accordion-body, though the transition does limit overflow."
+  },
+  {
+    title: "Accordion Item #3",
+    content: "This is the third item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the .accordion-body, though the transition does limit overflow."
+  }
+];
+
+---
+
+<div
+  class={`accordion ${className}`}
+  id="accordionPanelsStayOpenExample"
+  {...props}
+>
+{
+  data2.map((item, index) => {
+    return (
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target={`#panelsStayOpen-collapse-${index}`}
+            aria-expanded="false"
+            aria-controls={`panelsStayOpen-collapse-${index}`}
+          >
+            {item.title}
+          </button>
+        </h2>
+        <div
+          id={`panelsStayOpen-collapse-${index}`}
+          class="accordion-collapse collapse"
+        >
+          <div class="accordion-body">
+            {item.content}
+          </div>
+        </div>
+      </div>
+    );
+  })
+}
+
+</div>
+
+<style>
+  .accordion-body {
+    padding: 3rem;
+  }
+</style>

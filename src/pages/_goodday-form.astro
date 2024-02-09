@@ -1,0 +1,314 @@
+<!-- <pre>
+:default
+    fullname
+    phone
+    ic
+    gender
+    age
+    address1
+    address2
+    poskod
+    state
+:checkbox-showb
+    b-fullname
+    b-phone
+    b-ic
+    b-relation
+    agree
+    tnc
+</pre> -->
+<form
+  id="formspree__goodday"
+  class="needs-validation"
+  novalidate=""
+  action="https://formspree.io/f/xayrnlra"
+  method="POST"
+>
+  <h3>Participant Information</h3>
+  <div class="row g-3">
+    <div class="col-sm-6">
+      <label for="fullName" class="form-label">Full name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="fullname"
+        name="fullname"
+        placeholder="Enter your name as per IC"
+        required
+      />
+      <div class="invalid-feedback">Valid full name is required.</div>
+    </div>
+
+    <div class="col-sm-6">
+      <label for="phone" class="form-label">Contact Information</label>
+      <input
+        type="text"
+        class="form-control"
+        id="phone"
+        name="phone"
+        placeholder="e.g. 010 888 1800"
+        required
+      />
+      <div class="invalid-feedback">Valid contact number is required.</div>
+    </div>
+
+    <div class="col-sm-6">
+      <label for="ic" class="form-label">Identification Number</label>
+      <input
+        type="text"
+        class="form-control"
+        id="ic"
+        name="ic"
+        placeholder="e.g. 000000-00-0000"
+        required
+      />
+      <div class="invalid-feedback">Valid IC Number is required.</div>
+    </div>
+
+    <div class="col-6 col-sm-3">
+      <label for="gender" class="form-label">Gender</label>
+      <select
+        id="gender"
+        name="gender"
+        class="form-select"
+        aria-label="Select Gender"
+      >
+        <option selected disabled value="-">Select</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="-">Prefer not to say</option>
+      </select>
+    </div>
+
+    <div class="col-6 col-sm-3">
+      <label for="age" class="form-label">Age</label>
+      <input
+        type="text"
+        class="form-control"
+        id="age"
+        name="age"
+        placeholder="As of 2024"
+      />
+    </div>
+
+    <div class="col-sm-9">
+      <label for="address1" class="form-label">Address 1</label>
+      <input
+        type="text"
+        class="form-control"
+        id="address1"
+        name="address1"
+        placeholder="Line 1"
+      />
+
+      <label for="address2" class="form-label">Address 2</label>
+      <input
+        type="text"
+        class="form-control"
+        id="address2"
+        name="address2"
+        placeholder="Line 2"
+      />
+    </div>
+
+    <div class="col-sm-3">
+      <label for="poskod" class="form-label">Postcode</label>
+      <input
+        type="text"
+        class="form-control"
+        id="poskod"
+        name="poskod"
+        placeholder="e.g. 80000"
+      />
+
+      <label for="state" class="form-label">States</label>
+      <select
+        id="state"
+        name="state"
+        class="form-select"
+        aria-label="Select state"
+      >
+        <option selected disabled>Select</option>
+        <option value="Johor">Johor</option>
+        <option value="Kedah">Kedah</option>
+        <option value="Kelantan">Kelantan</option>
+        <option value="Kuala Lumpur">Kuala Lumpur</option>
+        <option value="Labuan">Labuan</option>
+        <option value="Melaka">Melaka</option>
+        <option value="Negeri Sembilan">Negeri Sembilan</option>
+        <option value="Pahang">Pahang</option>
+        <option value="Penang">Penang</option>
+        <option value="Perak">Perak</option>
+        <option value="Perlis">Perlis</option>
+        <option value="Putrajaya">Putrajaya</option>
+        <option value="Sabah">Sabah</option>
+        <option value="Sarawak">Sarawak</option>
+        <option value="Selangor">Selangor</option>
+        <option value="Terengganu">Terengganu</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="row py-4">
+    <div class="col-12">
+      <div class="form-check">
+        <label class="form-check-label" for="register_behalf">
+          Are you registering on behalf of someone?
+        </label>
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value=""
+          id="register_behalf"
+        />
+      </div>
+    </div>
+  </div>
+
+  <div class="row gy-3">
+    <div class="col-sm-6">
+      <label for="b-fullName" class="form-label">Full name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="b-fullname"
+        name="b-fullname"
+        placeholder="Enter your name as per IC"
+        required
+      />
+      <div class="invalid-feedback">Valid full name is required.</div>
+    </div>
+
+    <div class="col-sm-6">
+      <label for="b-phone" class="form-label">Contact Information</label>
+      <input
+        type="text"
+        class="form-control"
+        id="b-phone"
+        name="b-phone"
+        placeholder="e.g. 010 888 1800"
+        required
+      />
+      <div class="invalid-feedback">Valid contact number is required.</div>
+    </div>
+
+    <div class="col-sm-6">
+      <label for="b-ic" class="form-label">Identification Number</label>
+      <input
+        type="text"
+        class="form-control"
+        id="b-ic"
+        name="b-ic"
+        placeholder="e.g. 000000-00-0000"
+        required
+      />
+      <div class="invalid-feedback">Valid IC Number is required.</div>
+    </div>
+
+    <div class="col-sm-6">
+      <label for="b-relation" class="form-label"
+        >Relationship with Participant</label
+      >
+      <input
+        type="text"
+        class="form-control"
+        id="b-relation"
+        name="b-relation"
+        placeholder="e.g. Guardian"
+        required
+      />
+      <div class="invalid-feedback">
+        Please state your relationship with Participant.
+      </div>
+    </div>
+  </div>
+
+  <hr />
+
+  <div class="form-check">
+    <input type="checkbox" class="form-check-input" id="agree-partake" />
+    <label class="form-check-label" for="agree-partake">
+      Participant Release: Lorem ipsum dolor sit amet consectetur adipisicing
+      elit. Laboriosam possimus officia provident. Cupiditate? to:
+
+      <ol>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+        <li>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum
+          dolor sit amet consectetur adipisicing elit. Odio harum alias
+          doloribus corporis.
+        </li>
+      </ol>
+    </label>
+  </div>
+
+  <div class="form-check">
+    <input type="checkbox" class="form-check-input" id="agree-tnc" />
+    <label class="form-check-label" for="agree-tnc">
+      I have read and agree to the <a href="#" target="_blank"
+        >terms and conditions</a
+      >.
+    </label>
+  </div>
+
+  <hr class="my-4" />
+
+  <!-- <a href="#"></a> -->
+  <!-- <button type="submit">
+    <img src="/goodday-esport/btn-submit.jpg" alt="">
+  </button> -->
+
+  <input
+    type="image"
+    src="/goodday-esport/btn-submit.jpg"
+    border="0"
+    alt="Submit"
+  />
+
+  <button type="button" id="fill_placeholders">Fill with Placeholders</button>
+</form>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    let fill_placeholders = document.getElementById("fill_placeholders");
+    console.log(fill_placeholders);
+
+    fill_placeholders.addEventListener("click", fillWithPlaceholders);
+  });
+
+  function fillWithPlaceholders() {
+    // List of input IDs
+    const inputIds = [
+      "fullname",
+      "phone",
+      "ic",
+      "gender",
+      "age",
+      "address1",
+      "address2",
+      "poskod",
+      "state",
+      // "register_behalf",
+
+      "b-fullname",
+      "b-phone",
+      "b-ic",
+      "b-relation",
+      // "agree-partake",
+      // "agree-tnc",
+    ];
+
+    inputIds.forEach((id) => {
+      const element = document.getElementById(id);
+      if (element && element.placeholder) {
+        element.value = element.placeholder;
+      }
+    });
+
+    // For checkboxes (e.g., 'agree', 'tnc'), set them as checked or not based on your preference
+    document.getElementById("register_behalf").checked = true; // Example for checkbox
+    document.getElementById("agree-partake").checked = true; // Example for checkbox
+    document.getElementById("agree-tnc").checked = true; // Example for checkbox
+  }
+</script>

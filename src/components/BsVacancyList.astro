@@ -1,0 +1,229 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col">
+      <div
+        class="accordion accordion-flush accordion-rounded d-flex flex-column"
+        id="accordion__vacancylist"
+      >
+        <header class="accordion-item accordion-item__header d-none d-lg-block">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button">
+                <div class="col-lg-4">Position</div>
+                <div class="col-lg-4">Location</div>
+                <div class="col-lg-3">Type</div>
+            </button>
+          </h2>
+          <div
+            id="flush-collapseHeader"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordion__vacancylist"
+          >
+            <div class="accordion-body">
+              <!-- hello -->
+            </div>
+          </div>
+        </header>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseOne"
+              aria-expanded="false"
+              aria-controls="flush-collapseOne"
+            >
+              <div class="col-lg-4">Graphic Designer</div>
+              <div class="col-lg-4">Kuala Lumpur</div>
+              <div class="col-lg-3">Part-time</div>
+            </button>
+          </h2>
+          <div
+            id="flush-collapseOne"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordion__vacancylist"
+          >
+            <div class="accordion-body">
+              <div class="offset-lg-4 col-lg-6 my-4">
+                <p>
+                  We are seeking an experienced Project Manager to jin our team
+                  at ‘Saul Rhand Architecture. The ideal candidate will have a
+                  background in architecture or construction management and a
+                  proven track record of managing successful projects from
+                  concept to completion. In this role, you wil be responsible
+                  for collaborating with cients, architects, and contractors to
+                  ensure project success, preparing project budgets and
+                  schedules, and ensuring project compliance with building codes
+                  and regulations.
+                </p>
+
+                <p><b> Responsibilities:</b></p>
+
+                <ul>
+                  <li>
+                    Collaborate with project managers and clients to understand
+                    their design needs and vision
+                  </li>
+                  <li>
+                    Create innovative and sustainable designs for new
+                    construction and renovation projects
+                  </li>
+                  <li>Prepare detailed drawings and plans for projects</li>
+                  <li>Stay current on industry trends and building codes</li>
+                </ul>
+                <p><b> Requirements:</b></p>
+                <ul>
+                  <li>Bachelor's degree in Architecture</li>
+                  <li>3-5 years of experience in architectural design</li>
+                  <li>Proficient in AutoCAD, SketchUp, and Revit</li>
+                  <li>Strong design portfolio</li>
+                </ul>
+                <p><b>Benefts:</b></p>
+                <ul>
+                  <li>Health insurance</li>
+                  <li>401k plan</li>
+                  <li>Paid time off</li>
+                  <li>Professional development opportunities</li>
+                </ul>
+                <p><b>Skill:</b></p>
+
+                <ul>
+                  <li>Strong design skils</li>
+                  <li>Attention to detail</li>
+                  <li>Good communication and collaboration abilities</li>
+                  <li>Knowledge of building codes and regulations</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseTwo"
+              aria-expanded="false"
+              aria-controls="flush-collapseTwo"
+            >
+              <div class="col-lg-4">Project Manager</div>
+              <div class="col-lg-4">Selangor</div>
+              <div class="col-lg-3">Full-time</div>
+            </button>
+          </h2>
+          <div
+            id="flush-collapseTwo"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordion__vacancylist"
+          >
+            <div class="accordion-body">
+              Placeholder content for this accordion, which is intended to
+              demonstrate the <code>.accordion-flush</code> class. This is the
+              second item's accordion body. Let's imagine this being filled with
+              some actual content.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseThree"
+              aria-expanded="false"
+              aria-controls="flush-collapseThree"
+            >
+              <div class="col-lg-4">Event Manager</div>
+              <div class="col-lg-4">Kedah</div>
+              <div class="col-lg-3">Full-time</div>
+            </button>
+          </h2>
+          <div
+            id="flush-collapseThree"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordion__vacancylist"
+          >
+            <div class="accordion-body">
+              Placeholder content for this accordion, which is intended to
+              demonstrate the <code>.accordion-flush</code> class. This is the
+              third item's accordion body. Nothing more exciting happening here
+              in terms of content, but just filling up the space to make it
+              look, at least at first glance, a bit more representative of how
+              this would look in a real-world application.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  header.accordion-item__header {
+    pointer-events: none;
+    border-bottom: 0;
+  }
+  header.accordion-item__header h2.accordion-header button {
+    text-transform: uppercase;
+    color: #aaa;
+  }
+  .accordion-button {
+    font-weight: bold;
+    color: var(--bs-primary);
+  }
+  header.accordion-item__header button.accordion-button.collapsed::after {
+    display: none;
+  }
+  .accordion-button {
+    --bs-accordion-btn-padding-y: 1.5rem;
+    --bs-accordion-btn-padding-x: 1rem;
+    padding: var(--bs-accordion-btn-padding-y) var(--bs-accordion-btn-padding-x);
+  }
+  .accordion-button {
+    background-color: rgba(var(--bs-primary-rgb), 0.2);
+    transition: all 0.3s ease;
+    border-bottom: 1px solid var(--bs-primary);
+  }
+  .accordion-button:hover {
+    background-color: rgba(var(--bs-primary-rgb), 0.5);
+  }
+  /* reset first row button styling */
+  .accordion-item:first-child .accordion-button {
+    background-color: inherit;
+  }
+  .accordion-button:focus {
+    --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem
+      rgba(var(--bs-primary-rgb), 0.25);
+    border-color: rgba(var(--bs-primary-rgb), 0.8);
+    box-shadow: var(--bs-accordion-btn-focus-box-shadow);
+  }
+
+  .accordion-button:not(.collapsed) {
+    --bs-accordion-active-color: #fff;
+    --bs-accordion-active-bg: var(--bs-primary);
+    /* --bs-accordion-border-width: #fff; */
+    --bs-accordion-border-color: var(--bs-primary);
+
+    color: var(--bs-accordion-active-color);
+    background-color: var(--bs-accordion-active-bg);
+    box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0
+      var(--bs-accordion-border-color);
+  }
+  .accordion-body {
+    --bs-accordion-bg: rgba(var(--bs-primary-rgb), 0.05);
+    background-color: var(--bs-accordion-bg);
+  }
+
+  @media screen and (max-width: 991px) {
+    .accordion-button {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    button.accordion-button > div {
+      margin-right: 1rem !important; 
+    }
+  }
+</style>
