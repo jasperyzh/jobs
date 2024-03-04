@@ -4,22 +4,36 @@ const { className = "", ...props } = Astro.props;
 // example data for accordion
 const data2 = [
   {
-    title: "Accordion Item #1",
-    content: "This is the first item's accordion body. It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the .accordion-body, though the transition does limit overflow."
+    title: "Why join?",
+    content: "We are on a mission to set a new record and form the FIRST SENIOR ESPORTS TEAM in Malaysia, and we are looking for potential players among you!</p><p>Senior citizens can benefit so much from taking part in esports, especially in the mental and physical health aspects. Even better, esports is a fun activity that could help the seniors form stronger bonds with their young ones.</p><p>By signing up, you’re in for a treat to be trained under professional coaches such as MR.  AIMAN “aimaNNN” AZHAM, MR. MOHD “WANRO” SYAZWAN and MR. KELVIN PANG.</p>"
   },
   {
-    title: "Accordion Item #2",
-    content: "This is the second item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the .accordion-body, though the transition does limit overflow."
+    title: "Who should join?",
+    content: "<p>Senior citizens aged 50 years and above are eligible to join.</p><p>No gaming skills required, just bring on your hunger for new experiences!</p>"
   },
   {
-    title: "Accordion Item #3",
-    content: "This is the third item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the .accordion-body, though the transition does limit overflow."
+    title: "What games are we playing?",
+    content: "Participants will only be playing Counter-Strike 2 throughout the contest period."
   },
   {
-    title: "Accordion Item #3",
-    content: "This is the third item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the .accordion-body, though the transition does limit overflow."
+    title: "Why Counter Strike 2?",
+    content: "<p>Counter-Strike 2 is a fun, mentally and physically stimulating game for seniors and their young ones to play.</p><p>It is a free upgrade from CS:GO and is a multiplayer tactical first-person shooter (FPS) game where two teams compete to achieve different goals, depending on the game mode selected.</p><p>Interested? Sign up now to learn more!</p>"
+  },
+  {
+    title: "What is the contest duration?",
+    content: "This contest starts on 19 February 2024 and ends on 13 May 2024, throughout which the Registration, Shortlisting, Game Training, and 1st Game Play sessions will be carried out."
+  },
+  {
+    title: "How does the selection process work?",
+    content: "<p>Once the registration stage is completed, our person in charge (PIC) will conduct a shortlisting process with participants via virtual interviews.</p><p>Participants will be asked with simple introductory questions and esports-related questions - after which 10 participants will be shortlisted to proceed to the next steps.</p>"
+  },
+  {
+    title: "What happens after the shortlisting period?",
+    content: "<p>10 participants will be shortlisted and invited to attend the training sessions. The selected participants will be informed and contacted via WhatsApp or Email provided.</p><p>From there, only 5 participants will be further selected to join the final game session.</p>"
   }
 ];
+
+
 
 ---
 
@@ -34,7 +48,7 @@ const data2 = [
       <div class="accordion-item">
         <h2 class="accordion-header">
           <button
-            class="accordion-button collapsed"
+            class="accordion-button collapsed fs-5"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target={`#panelsStayOpen-collapse-${index}`}
@@ -48,8 +62,8 @@ const data2 = [
           id={`panelsStayOpen-collapse-${index}`}
           class="accordion-collapse collapse"
         >
-          <div class="accordion-body">
-            {item.content}
+          <div class="accordion-body " set:html={item.content}>
+            
           </div>
         </div>
       </div>

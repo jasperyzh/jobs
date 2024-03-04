@@ -1,0 +1,538 @@
+---
+import Layout from "../layouts/Layout.astro";
+import GooddayForm from "./_goodday-form.astro";
+import GooddayFaq from "./_goodday-faq.astro";
+---
+
+<Layout title="Goodday Charge | Boomers to Gamers">
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+    crossorigin="anonymous"
+  />
+
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+  />
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+  <header class="bg-black text-white">
+    <div class="container">
+      <header class="d-flex flex-wrap py-3">
+        <a
+          href="/"
+          class="d-flex align-items-center link-body-emphasis text-decoration-none"
+        >
+          <img
+            src="/goodday/logo.svg"
+            alt="goodday logo"
+            style="height: 60px;"
+          />
+        </a>
+
+        <ul class="nav nav-pills ms-4 me-auto align-items-center">
+          <li class="nav-item">
+            <a href="#about" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="#benefit" class="nav-link">Benefits of ESports</a>
+          </li>
+          <li class="nav-item">
+            <a href="#journey" class="nav-link">Journey</a>
+          </li>
+        </ul>
+
+        <a href="#register">
+          <img
+            src="/goodday/btn-register.svg"
+            alt="goodday esport button to register section"
+            style="height: 60px;"
+          />
+        </a>
+      </header>
+    </div>
+  </header>
+
+  <main style="background-color: var(--yellow)">
+    <section id="masthead">
+      <div class="container container--shadow px-0">
+        <div
+          id="carouselExampleIndicators"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="/goodday/landing1-80.jpg"
+                class="d-block w-100"
+                alt="Landing 1"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="/goodday/landing2-80.jpg"
+                class="d-block w-100"
+                alt="Landing 2"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="/goodday/landing3-80.jpg"
+                class="d-block w-100"
+                alt="Landing 3"
+              />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="opportunity">
+      <div class="container container--shadow px-0">
+        <div class="row">
+          <!-- Desktop Images -->
+          <img
+            src="/goodday/opportunity-80.jpg"
+            alt="Opportunity"
+            class="d-none d-md-block img-fluid"
+          />
+          <!-- Mobile Images -->
+          <img
+            src="/goodday/opportunity-mobile.jpg"
+            alt="Opportunity"
+            class="d-md-none img-fluid"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="lookingfor">
+      <div class="container container--shadow px-0">
+        <div class="row">
+          <!-- Desktop Images -->
+          <img
+            src="/goodday/lookingfor-80.jpg"
+            alt="Looking For"
+            class="d-none d-md-block img-fluid"
+          />
+          <!-- Mobile Images -->
+          <img
+            src="/goodday/lookingfor-mobile.jpg"
+            alt="Looking For"
+            class="d-md-none img-fluid"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="benefit">
+      <div class="container container--shadow px-0">
+        <div class="row">
+          <!-- Desktop Images -->
+          <img
+            id="desktop-image"
+            src="/goodday/why_esport-80.jpg"
+            alt="Benefits of Esports"
+            class="d-none d-md-block img-fluid"
+          />
+          <!-- Mobile Images -->
+          <img
+            id="mobile-image"
+            src="/goodday/why_esport-mobile.jpg"
+            alt="Benefits of Esports"
+            class="d-md-none img-fluid"
+          />
+        </div>
+      </div>
+    </section>
+    <style>
+      .h2__title {
+        font-family: "Anton", sans-serif;
+        text-transform: uppercase;
+        color: var(--brown);
+        text-align: center;
+        font-size: 3.5rem;
+        text-wrap: balance;
+        text-shadow: -4px -4px 0 var(--orange);
+      }
+    </style>
+
+    <div class="two-section">
+      <div class="container section__bg py-5 container--shadow">
+        <section id="journey" class="journey">
+          <div class="row pb-4">
+            <!-- <img src="/goodday/signup-title_1.svg" alt="test" style="height: 150px;"/> -->
+            <h2 class="h2__title">
+              Sign up as Malaysia's First Senior Esports team and make history
+              today!
+            </h2>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card card__whiteblue">
+                <div class="card-body">
+                  <h5 class="card-title">Call to Entry</h5>
+                  <p class="card-text">
+                    Ready to set a new record in the Malaysian Book of Records?
+                  </p>
+                  <p class="card-text">
+                    Make history today and submit the form below for yourself,
+                    or for someone you know!
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card card__whiteblue">
+                <div class="card-body">
+                  <h5 class="card-title">Shortlist</h5>
+                  <p class="card-text">
+                    All submission will be filtered and 10 shortlisted
+                    candidates will go through a brief video interview.
+                  </p>
+                  <p class="card-text">
+                    Once shortlisted, our team will be in contact with you via
+                    the contact details you have provided.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card card__whiteblue">
+                <div class="card-body">
+                  <h5 class="card-title">Training & 1<sup>st</sup> Gameplay</h5>
+                  <p class="card-text">[PENDING MECHANICS TO BE FINALIZED]</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <hr class="mt-5" style="color: white; opacity: 0.70;" />
+        <section id="register" class="py-5">
+          <div class="row g-5 align-items-center">
+            <div class="col-md-4">
+              <!-- <img src="/goodday-esport/section7-history.jpg" alt="test" /> -->
+
+              <figure class="form-decor">
+                <img
+                  class="form-title"
+                  src="/goodday/form-title.png"
+                  alt="Make History Today!"
+                />
+                <img
+                  class="form-charge"
+                  src="/goodday/form-charge.svg"
+                  alt="zap!"
+                />
+              </figure>
+
+              <style>
+                .form-decor {
+                  position: relative;
+                }
+                .form-title {
+                  position: relative;
+                  z-index: 2;
+                }
+                .form-charge {
+                  position: absolute;
+                  top: 0;
+                  right: 0;
+                  bottom: 0;
+                  left: 0;
+                  margin: auto;
+                  opacity: 20%;
+                  z-index: 1;
+                }
+              </style>
+            </div>
+
+            <div class="col-md-8 col-lg-8">
+              <GooddayForm />
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- <img src="/goodday-esport/section7.jpg" alt="test" /> -->
+    <!-- <section id="register" class="section__bg py-4">
+      <div class="container">
+        
+      </div>
+    </section> -->
+
+    <section id="faq" class="section__bg">
+      <div class="container bg__lightgray">
+        <div class="py-5 text-center">
+          <h2 class="font__cs" style="font-size: 3rem;">
+            Frequently Asked Questions (FAQs)
+          </h2>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <GooddayFaq className="accordion-flush mb-4" />
+          </div>
+        </div>
+        <div class="py-5 text-center">
+          <h3 class="font__anton">
+            All CHARGED up with questions? Contact us below!
+          </h3>
+          <h5 class="font__ssv" style="font-size: 20px;">
+            <b
+              >Email: <a href="mailto:gooddaychargedgoldensnipers.com"
+                >gooddaychargedgoldensnipers.com</a
+              ></b
+            >
+          </h5>
+        </div>
+        <div class="py-5 text-center">
+          <h5 class="font__ssv" style="font-size: 20px;">
+            IN PARTNERSHIP WITH
+          </h5>
+          <img src="/goodday/partner-orangeesport.png" alt="Partnership" />
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<!-- <footer class="text-white py-4 text-center" style="background: #353535">
+  <div class="container"> -->
+<!-- tnc -->
+<!-- <p>
+      <a href="#" class="text-white">Terms and Conditions</a>
+    </p>
+    <p>&copy; Goodday Esport Campaign</p>
+  </div>
+</footer> -->
+
+<script>
+  // toggle images for section 5
+  const benefit_desktop = document.getElementById("desktop-image");
+  // const benefit_mobile = document.getElementById("mobile-image");
+
+  if (benefit_desktop) {
+    benefit_desktop.addEventListener("click", function () {
+      this.src = this.src.includes("/goodday/why_esport-80.jpg")
+        ? "/goodday/why_esport-on-80.jpg"
+        : "/goodday/why_esport-80.jpg";
+    });
+  }
+
+  /* if (benefit_mobile) {
+    benefit_mobile.addEventListener("click", function () {
+      this.src = this.src.includes("/goodday/why_esport-80.jpg")
+        ? "/goodday/why_esport-on-80.jpg"
+        : "/goodday/why_esport-80.jpg";
+    });
+  } */
+</script>
+
+<style>
+  @font-face {
+    font-family: "Anton";
+    src: url("goodday/fonts/Anton-Regular.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "CS Regular";
+    src: url("goodday/fonts/cs_regular.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Source Sans Variable";
+    src: url("goodday/fonts/SourceSansVariable-Roman.otf") format("opentype");
+  }
+
+  :root {
+    --yellow: #fac100;
+    --lightgray: #d4d4d4;
+    --brown: #4f2d21;
+    --orange: #fc9300;
+    --lightorange: #ff8b26;
+    --lightblue: #57addc;
+  }
+
+  h1,
+  h2,
+  h3,
+  .h1,
+  .h2,
+  .h3 {
+    font-family: "Anton", sans-serif;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .font__cs {
+    font-family: "CS Regular", sans-serif;
+  }
+  main > section {
+    background: var(--yellow);
+  }
+  .hero--aspect {
+    background: rgba(255, 0, 0, 0.5);
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+
+    @media screen and (min-width: 425px) {
+      aspect-ratio: 4/3;
+    }
+
+    @media screen and (min-width: 992px) {
+      aspect-ratio: 16/9;
+    }
+  }
+
+  .container--shadow {
+    filter: drop-shadow(1rem 1rem 1rem rgba(0, 0, 0, 0.2));
+  }
+
+  .row__findoutmore {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  .section__bg {
+    background: #f9c000;
+  }
+
+  .bg__lightgray {
+    background: var(--lightgray);
+  }
+
+  .card__whiteblue {
+    /* background: linear-gradient(143deg, #f99c02 0%, var(--yellow) 100%); */
+    background: white;
+    border: 5px solid var(--lightblue);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 1rem;
+
+    & h5.card-title {
+      padding: 1rem 0;
+      font-family: "CS Regular", sans-serif;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .card__whiteblue {
+      height: 100%;
+    }
+  }
+
+  .accordion {
+    --bs-accordion-color: var(--bs-body-color);
+    --bs-accordion-bg: var(--bs-light);
+
+    --bs-accordion-border-color: var(--brown);
+    --bs-accordion-btn-color: var(--brown);
+    --bs-accordion-btn-bg: var(--lightorange);
+    --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    --bs-accordion-btn-icon-width: 1.25rem;
+    --bs-accordion-btn-icon-transform: rotate(-180deg);
+    --bs-accordion-btn-icon-transition: transform 0.2s ease-in-out;
+    --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23052c65'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    --bs-accordion-btn-focus-border-color: #86b7fe;
+    --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+    --bs-accordion-body-padding-x: 1.25rem;
+    --bs-accordion-body-padding-y: 1rem;
+    --bs-accordion-active-color: var(--bs-light);
+    --bs-accordion-active-bg: var(--orange);
+
+    --bs-accordion-bg: transparent;
+    --bs-accordion-btn-bg: transparent;
+    --bs-accordion-active-bg: transparent;
+    --bs-accordion-active-color: brown;
+
+    & .accordion-body {
+      background-color: var(--lightgray);
+    }
+  }
+</style>
+
+<style>
+  /* dzul's */
+  .nav-link {
+    font-family: "CS Regular", sans-serif;
+    font-size: 20px;
+    color: var(--lightgray);
+  }
+
+  .font__ssv {
+    font-family: "Source Sans Variable", sans-serif;
+  }
+
+  .journey {
+    background-image: url("/goodday/signup-bg-charge.svg");
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+  }
+
+  @media screen and (max-width: 768px) {
+    .nav-item {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    a[href="#register"] {
+      width: 40%;
+    }
+  }
+</style>
